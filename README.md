@@ -1,1 +1,30 @@
-# csi2532_devoir1
+# 
+
+<h1 align="center">
+   CSI 2532 DEVOIR 1
+</h1>
+
+<p align="center">
+  JACOB FODALE 300119336
+</p>
+
+# A : MODÈLE E-R
+
+
+
+  ## A1 : RELATION, CARDINALITÉ & PARITCIPATION
+
+  ## A2 : CONCEPTION DE SYSTÈME
+
+  ## A3 : ALGÈBRE RELATIONNELLE
+
+
+
+
+# B : SQL
+
+## B1 : LECTURE DE REQUÊTES SQL
+
+## B2 : ÉCRITURE DE REQUÊTES SQL
+
+## B3 : MISE À JOUR DE SCHÉMA SQL
