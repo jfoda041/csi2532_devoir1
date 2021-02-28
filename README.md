@@ -16,14 +16,25 @@
   
   ### A
   
+  ![A1 A](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A1A.png?raw=true)
+  
   ### B
+  
+  ![A1 B](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A1B.png?raw=true)
   
   ### C
   
+  ![A1 C](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A1C.png?raw=true)
+  
 
   ## A2 : CONCEPTION DE SYSTÈME
+  
+  ![A2](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A2.png?raw=true)
 
   ## A3 : ALGÈBRE RELATIONNELLE
+  
+  ![image](https://user-images.githubusercontent.com/71846266/109406188-0c3d9980-7945-11eb-88e7-81938327a281.png)
+
 
 
 
@@ -92,6 +103,10 @@ SELECT name FROM users WHERE join_date < '2020-01-01';
 
 ```
 
+Voici le résultat :
+
+![B2 A](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B2A.png?raw=true)
+
 ### B
 
 Vu qu'il faut inclure toute les _users_ il faut un **SELECT** avec un **FROM** _users_. Il faut parcontre aussi accès au license. On utilise donc un **JOIN**.
@@ -101,6 +116,9 @@ Le join doit être **LEFT** puisqu'il faut inclure les _users_ qui n'ont pas de 
 ```sql
 SELECT  name, COUNT(user_id) as num FROM users LEFT JOIN licenses ON users.id = licenses.user_id GROUP BY name, user_id ORDER by COUNT(user_id) DESC, name ASC;	
 ```
+Voici le résultat :
+
+![B2 B](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B2B.png?raw=true)
 
 ### C
 
@@ -130,6 +148,10 @@ Finalement, j'essaie le code de la question précédente :
 ```sql
 SELECT  name, COUNT(user_id) as num FROM users LEFT JOIN licenses ON users.id = licenses.user_id GROUP BY name, user_id ORDER by COUNT(user_id) DESC, name ASC;	
 ```
+
+Voici le résultat : 
+
+![B2 C](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B2C.png?raw=true)
 
 ### D
 
@@ -187,6 +209,14 @@ BEGIN;
 
 COMMIT;
 
+```
+
+Voici un exemple d'insertion sql:
+
+```sql
+INSERT INTO licenses (user_id, software_name, access_code, software_version)
+VALUES
+ (48, 'Sketch', 'xxxyyy111', '52');
 ```
 
 ### D
