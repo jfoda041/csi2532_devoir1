@@ -16,20 +16,21 @@
   
   ### A
   
-  ![A1 A](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A1A.png?raw=true)
+  ![A1A](https://user-images.githubusercontent.com/71846266/109406345-3ba0d600-7946-11eb-8466-88e8fdb0d5ee.png)
+
   
   ### B
   
-  ![A1 B](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A1B.png?raw=true)
+![A1B](https://user-images.githubusercontent.com/71846266/109406347-3f345d00-7946-11eb-95fd-634df3a1eff6.png)
+
   
   ### C
   
-  ![A1 C](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A1C.png?raw=true)
-  
+ ![A1C](https://user-images.githubusercontent.com/71846266/109406348-4196b700-7946-11eb-99d9-6c818cb4e12c.png)
 
   ## A2 : CONCEPTION DE SYSTÈME
   
-  ![A2](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/A2.png?raw=true)
+![A2](https://user-images.githubusercontent.com/71846266/109406349-43f91100-7946-11eb-9fad-88121c7750ad.png)
 
   ## A3 : ALGÈBRE RELATIONNELLE
   
@@ -48,20 +49,23 @@
 
 La première reqête s'exécute sans conflit. Voici la sortie:
 
-![B1 A](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B1A.png?raw=true)
+![B1A](https://user-images.githubusercontent.com/71846266/109406358-52dfc380-7946-11eb-9a83-02e4a887186c.png)
+
 
 ### B
 
 La seconde reqête s'exécute pareillement. Voici la sortie:
 
-![B1 B](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B1B.png?raw=true)
+![B1B](https://user-images.githubusercontent.com/71846266/109406362-55421d80-7946-11eb-9db8-a1b64aaaa010.png)
+
 
 
 ### C
 
 La troisième requête ne s'exécute pas:
 
-![B1 C Fonctinne pas](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B1C1.png?raw=true)
+![B1C1](https://user-images.githubusercontent.com/71846266/109406364-596e3b00-7946-11eb-85c1-f608948e309a.png)
+
 
 Le problème est qu'on produit le group  _users_19_ en utilisant le _id_ et le _name_ en tant que paramètre, mais la déclaration _GROUP BY_
 situé au bas propose seulement un regroupement via _name_. On change donc la ligne pour inclure le _id_ aussi.
@@ -72,7 +76,7 @@ GROUP BY id, name
 
 Conséquement, le code s'exécute et produit :
 
-![B1 C Fonctinne ](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B1C2.png?raw=true)
+![B1C2](https://user-images.githubusercontent.com/71846266/109406366-5c692b80-7946-11eb-96ec-89328b19f2d3.png)
 
 Voici donc le code SQL complète:
 
@@ -105,7 +109,7 @@ SELECT name FROM users WHERE join_date < '2020-01-01';
 
 Voici le résultat :
 
-![B2 A](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B2A.png?raw=true)
+![B2A](https://user-images.githubusercontent.com/71846266/109406379-7276ec00-7946-11eb-81cd-02781938912b.png)
 
 ### B
 
@@ -114,11 +118,12 @@ Vu qu'il faut inclure toute les _users_ il faut un **SELECT** avec un **FROM** _
 Le join doit être **LEFT** puisqu'il faut inclure les _users_ qui n'ont pas de license. Finalement, on crée un group et un tire les résultat :
 
 ```sql
-SELECT  name, COUNT(user_id) as num FROM users LEFT JOIN licenses ON users.id = licenses.user_id GROUP BY name, user_id ORDER by COUNT(user_id) DESC, name ASC;	
+SELECT  name, COUNT(user_id) as num FROM users LEFT JOIN licenses ON users.id = licenses.user_id GROUP BY name,
+user_id ORDER by COUNT(user_id) DESC, name ASC;	
 ```
 Voici le résultat :
 
-![B2 B](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B2B.png?raw=true)
+![B2B](https://user-images.githubusercontent.com/71846266/109406380-760a7300-7946-11eb-9db9-538fc0f23aa7.png)
 
 ### C
 
@@ -146,12 +151,13 @@ INSERT INTO licenses (user_id, software_name, access_code)
 Finalement, j'essaie le code de la question précédente :
 
 ```sql
-SELECT  name, COUNT(user_id) as num FROM users LEFT JOIN licenses ON users.id = licenses.user_id GROUP BY name, user_id ORDER by COUNT(user_id) DESC, name ASC;	
+SELECT  name, COUNT(user_id) as num FROM users LEFT JOIN licenses ON users.id = licenses.user_id GROUP BY name,
+user_id ORDER by COUNT(user_id) DESC, name ASC;	
 ```
 
 Voici le résultat : 
 
-![B2 C](https://github.com/jfoda041/csi2532_devoir1/blob/main/assets/B2C.png?raw=true)
+![B2C](https://user-images.githubusercontent.com/71846266/109406382-7acf2700-7946-11eb-9c56-f7acc632a8ec.png)
 
 ### D
 
